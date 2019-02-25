@@ -8,7 +8,9 @@ const url = 'mongodb://localhost:27017';
 const dbName = 'fruits';
 
 // Create a new MongoClient
-const client = new MongoClient(url);
+const client = new MongoClient(url, {
+    useNewUrlParser: true
+});
 
 // Use connect method to connect to the Server
 client.connect(function (err) {
